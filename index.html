@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Seabank Fish &amp; Chips — West Lynn · St Edmundsbury Road · PE30 2NG</title>
+<meta name="description" content="Seabank Fish &amp; Chips — traditional fried fish and chips at 95 St Edmundsbury Road, West Lynn, King's Lynn PE30 2NG. Open Monday to Saturday. Call 01553 772812 for collection.">
+<meta name="theme-color" content="#1B3A5C">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#1B3A5C;
+  --navy-deep:#0E2640;
+  --navy-ink:#091830;
+  --chalk:#F5F5F5;
+  --chalk-warm:#EFEDE6;
+  --pantile:#B0533A;
+  --pantile-deep:#8A3D27;
+  --rule:rgba(14,38,64,0.18);
+  --rule-soft:rgba(14,38,64,0.08);
+  --rule-chalk:rgba(245,245,245,0.22);
+  --display:"Fraunces","Iowan Old Style","Times New Roman",serif;
+  --body:"Inter Tight","Helvetica Neue",system-ui,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--body);
+  font-size:clamp(15.5px,0.45vw + 14px,17.5px);
+  line-height:1.55;
+  color:var(--navy-ink);
+  background:var(--chalk);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;background:none;border:0;color:inherit}
+
+/* ——— shared editorial primitives ——— */
+.wrap{width:min(1180px,92%);margin-inline:auto}
+.eyebrow{
+  font-family:var(--body);
+  font-size:.72rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--pantile);
+}
+.eyebrow--chalk{color:rgba(245,245,245,.72)}
+.rule{height:1px;background:var(--rule);width:100%;border:0;margin:0}
+.rule--chalk{background:var(--rule-chalk)}
+.muted{color:rgba(9,24,48,.62)}
+
+/* ——— masthead bar ——— */
+.masthead{
+  position:sticky;top:0;z-index:50;
+  background:var(--chalk);
+  border-bottom:1px solid var(--rule);
+}
+.masthead__inner{
+  display:flex;align-items:center;justify-content:space-between;gap:1.25rem;
+  padding:.85rem 0;
+}
+.brandmark{
+  font-family:var(--display);
+  font-weight:600;
+  font-variation-settings:"opsz" 14;
+  font-size:1.05rem;
+  letter-spacing:.02em;
+  color:var(--navy-deep);
+  display:inline-flex;align-items:baseline;gap:.55rem;
+}
+.brandmark em{
+  font-style:italic;
+  color:var(--pantile);
+  font-weight:400;
+}
+.nav{display:flex;gap:1.6rem;align-items:center}
+.nav a{
+  font-size:.78rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:500;
+  color:var(--navy-deep);
+  padding:.35rem 0;
+  border-bottom:1px solid transparent;
+  transition:border-color .25s ease,color .25s ease;
+}
+.nav a:hover{border-bottom-color:var(--pantile);color:var(--pantile)}
+.nav__cta{
+  display:none;
+  font-family:var(--body);
+  font-weight:600;
+  font-size:.85rem;
+  background:var(--navy-deep);
+  color:var(--chalk);
+  padding:.55rem .95rem;
+  border-radius:0;
+  letter-spacing:.03em;
+  text-transform:none;
+}
+.nav__cta:hover{background:var(--pantile);color:var(--chalk);border-color:transparent}
+@media(min-width:760px){.nav__cta{display:inline-flex}}
+@media(max-width:759px){
+  .nav{gap:1rem}
+  .nav a:not(.nav__cta){font-size:.7rem;letter-spacing:.14em}
+}
+
+/* ——— hero / editorial masthead ——— */
+.hero{
+  background:var(--chalk);
+  padding:2.4rem 0 3.2rem;
+  position:relative;
+}
+.hero__top{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  gap:1.5rem;flex-wrap:wrap;
+  padding-bottom:1.2rem;
+  border-bottom:1px solid var(--rule);
+}
+.hero__date{
+  font-family:var(--display);
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--navy-deep);
+  font-variation-settings:"opsz" 14;
+}
+.hero__cat{
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
+  font-weight:600;color:var(--pantile);
+}
+.hero__title{
+  font-family:var(--display);
+  font-weight:600;
+  font-variation-settings:"opsz" 144;
+  font-size:clamp(3.4rem,12vw,9.2rem);
+  line-height:.92;
+  letter-spacing:-.02em;
+  color:var(--navy-deep);
+  margin:2rem 0 1.2rem;
+  max-width:14ch;
+}
+.hero__title em{
+  font-style:italic;
+  font-weight:400;
+  color:var(--pantile);
+}
+.hero__title .amp{
+  font-style:italic;
+  font-weight:400;
+  color:var(--pantile);
+  font-variation-settings:"opsz" 144,"SOFT" 100;
+}
+.hero__lede{
+  font-family:var(--display);
+  font-weight:400;
+  font-variation-settings:"opsz" 28;
+  font-size:clamp(1.15rem,1.6vw + .6rem,1.65rem);
+  line-height:1.36;
+  color:var(--navy-deep);
+  max-width:32ch;
+  margin:0 0 2.4rem;
+}
+.hero__grid{
+  display:grid;grid-template-columns:1fr;gap:2rem;
+  border-top:1px solid var(--rule);
+  padding-top:1.4rem;
+}
+@media(min-width:780px){
+  .hero__grid{grid-template-columns:1.4fr 1fr 1fr;gap:2.4rem}
+}
+.hero__col h3{
+  font-family:var(--body);
+  font-weight:600;
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--pantile);
+  margin:0 0 .7rem;
+}
+.hero__col p,.hero__col a{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 20;
+  font-size:1.05rem;
+  line-height:1.45;
+  color:var(--navy-deep);
+  margin:0 0 .35rem;
+  font-style:normal;
+}
+.hero__phone{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 60;
+  font-weight:600;
+  font-size:clamp(1.6rem,2.6vw,2.3rem);
+  letter-spacing:-.01em;
+  display:inline-block;
+  margin-bottom:.4rem;
+  color:var(--navy-deep);
+}
+.hero__phone:hover{color:var(--pantile)}
+
+/* ——— wordmark divider (no marquee — quiet rule line) ——— */
+.divider{
+  background:var(--navy-deep);
+  color:var(--chalk);
+  padding:.8rem 0;
+  border-top:1px solid var(--navy-ink);
+  border-bottom:1px solid var(--navy-ink);
+}
+.divider__inner{
+  display:flex;justify-content:center;align-items:center;gap:1.4rem;flex-wrap:wrap;
+  font-family:var(--body);
+  font-size:.75rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.divider__inner span:not(:last-child)::after{
+  content:"·";margin-left:1.4rem;color:var(--pantile);
+}
+
+/* ——— section scaffolding ——— */
+section[id]{scroll-margin-top:80px}
+.sec{padding:5rem 0 4.2rem}
+.sec__head{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:1.5rem;flex-wrap:wrap;
+  padding-bottom:1.6rem;border-bottom:1px solid var(--rule);
+  margin-bottom:2.4rem;
+}
+.sec__num{
+  font-family:var(--display);
+  font-style:italic;
+  font-variation-settings:"opsz" 28;
+  font-size:1.05rem;
+  color:var(--pantile);
+}
+.sec__title{
+  font-family:var(--display);
+  font-weight:600;
+  font-variation-settings:"opsz" 90;
+  font-size:clamp(2.2rem,5.5vw,3.6rem);
+  line-height:1;
+  letter-spacing:-.015em;
+  color:var(--navy-deep);
+  margin:.35rem 0 0;
+}
+.sec__title em{font-style:italic;font-weight:400;color:var(--pantile)}
+
+/* ——— About ——— */
+.about{background:var(--chalk-warm)}
+.about__grid{
+  display:grid;grid-template-columns:1fr;gap:2.4rem;
+}
+@media(min-width:820px){
+  .about__grid{grid-template-columns:1.2fr 1fr;gap:3.6rem;align-items:start}
+}
+.about__lede{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 32;
+  font-size:clamp(1.4rem,2vw + .4rem,2rem);
+  line-height:1.32;
+  color:var(--navy-deep);
+  margin:0 0 1.6rem;
+}
+.about__body p{margin:0 0 1.05rem;max-width:54ch}
+.about__body p:last-child{margin-bottom:0}
+.about__aside{
+  border:1px solid var(--rule);
+  padding:1.8rem;
+  background:var(--chalk);
+}
+.about__aside h4{
+  font-family:var(--body);
+  font-weight:600;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--pantile);margin:0 0 1rem;
+}
+.facts{list-style:none;padding:0;margin:0}
+.facts li{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.9rem 0;border-bottom:1px solid var(--rule-soft);
+  font-family:var(--display);font-variation-settings:"opsz" 18;
+  font-size:1rem;color:var(--navy-deep);
+}
+.facts li:last-child{border-bottom:0;padding-bottom:0}
+.facts li span:first-child{
+  font-family:var(--body);
+  font-weight:500;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(9,24,48,.55);align-self:center;
+}
+.facts li span:last-child{text-align:right;font-weight:600}
+
+/* ——— Menu (services) ——— */
+.menu__cols{
+  display:grid;grid-template-columns:1fr;gap:2.4rem;
+}
+@media(min-width:780px){
+  .menu__cols{grid-template-columns:1fr 1fr;gap:3.2rem}
+}
+.menu-block h3{
+  font-family:var(--display);
+  font-weight:600;font-variation-settings:"opsz" 60;
+  font-size:1.6rem;letter-spacing:-.01em;
+  color:var(--navy-deep);
+  margin:0 0 1.2rem;
+  padding-bottom:.7rem;
+  border-bottom:1px solid var(--rule);
+}
+.menu-block h3 em{font-style:italic;font-weight:400;color:var(--pantile)}
+.menu-list{list-style:none;padding:0;margin:0}
+.menu-list li{
+  display:flex;justify-content:space-between;align-items:baseline;gap:1.2rem;
+  padding:1rem 0;
+  border-bottom:1px dotted var(--rule-soft);
+  font-family:var(--display);
+  font-variation-settings:"opsz" 22;
+  font-size:1.1rem;
+  color:var(--navy-deep);
+}
+.menu-list li:last-child{border-bottom:0}
+.menu-list .item{font-weight:500}
+.menu-list .item em{
+  display:block;
+  font-family:var(--body);
+  font-style:normal;
+  font-weight:400;
+  font-size:.82rem;
+  letter-spacing:.04em;
+  color:rgba(9,24,48,.55);
+  margin-top:.18rem;
+  text-transform:none;
+}
+.menu-list .dotline{
+  flex:1;height:1px;align-self:end;margin-bottom:.45rem;
+  border-bottom:1px dotted var(--rule);
+}
+.menu__note{
+  margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--rule);
+  font-family:var(--display);
+  font-style:italic;font-variation-settings:"opsz" 18;
+  font-size:1rem;color:rgba(9,24,48,.62);max-width:60ch;
+}
+
+@supports (animation-timeline:view()){
+  .menu-list li{
+    animation:rise both;
+    animation-timeline:view();
+    animation-range:entry 0% cover 24%;
+  }
+  @keyframes rise{
+    from{opacity:0;transform:translateY(1.2rem)}
+    to{opacity:1;transform:translateY(0)}
+  }
+}
+
+/* ——— Contact ——— */
+.contact{background:var(--navy-deep);color:var(--chalk)}
+.contact .sec__num{color:rgba(245,245,245,.62)}
+.contact .sec__title{color:var(--chalk)}
+.contact .sec__title em{color:#E0A28A}
+.contact .sec__head{border-bottom-color:var(--rule-chalk)}
+.contact__grid{
+  display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:start;
+}
+@media(min-width:840px){
+  .contact__grid{grid-template-columns:1fr 1.2fr;gap:3.6rem}
+}
+.contact__col h4{
+  font-family:var(--body);
+  font-weight:600;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:#E0A28A;margin:0 0 .8rem;
+}
+.contact__col p,.contact__col a{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 22;
+  font-size:1.15rem;line-height:1.45;
+  color:var(--chalk);margin:0 0 .35rem;
+}
+.contact__col a:hover{color:#E0A28A}
+.contact__phone{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 80;
+  font-weight:600;
+  font-size:clamp(1.9rem,3.5vw,2.8rem);
+  letter-spacing:-.015em;
+  display:inline-block;margin:.2rem 0 .8rem;
+}
+.contact__block{
+  padding:1.4rem 0;
+  border-top:1px solid var(--rule-chalk);
+}
+.contact__block:first-of-type{border-top:0;padding-top:0}
+.map{
+  border:1px solid var(--rule-chalk);
+  background:#091830;
+  aspect-ratio:4/3;
+  width:100%;
+  filter:grayscale(.4) contrast(1.05);
+}
+@media(min-width:840px){.map{aspect-ratio:5/4}}
+.hours{
+  list-style:none;padding:0;margin:0;
+  font-family:var(--display);font-variation-settings:"opsz" 20;
+  font-size:1.05rem;
+}
+.hours li{
+  display:flex;justify-content:space-between;gap:1rem;
+  padding:.7rem 0;border-bottom:1px solid var(--rule-chalk);
+}
+.hours li:last-child{border-bottom:0}
+.hours li span:first-child{
+  font-family:var(--body);
+  font-weight:500;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(245,245,245,.7);align-self:center;
+}
+.hours li span:last-child{font-weight:600;color:var(--chalk)}
+.hours li.closed span:last-child{color:#E0A28A}
+
+/* ——— Gallery placeholder ——— */
+.gallery__intro{
+  font-family:var(--display);
+  font-variation-settings:"opsz" 28;
+  font-size:clamp(1.2rem,1.5vw + .5rem,1.6rem);
+  line-height:1.4;
+  color:var(--navy-deep);
+  max-width:48ch;margin:0 0 2.4rem;
+}
+.gallery__intro em{font-style:italic;color:var(--pantile)}
+.gallery__grid{
+  display:grid;gap:1rem;
+  grid-template-columns:repeat(2,1fr);
+}
+@media(min-width:680px){
+  .gallery__grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:980px){
+  .gallery__grid{grid-template-columns:repeat(4,1fr)}
+}
+.frame{
+  aspect-ratio:1/1;
+  background:var(--chalk-warm);
+  border:1px solid var(--rule);
+  position:relative;
+  display:grid;place-items:center;
+}
+.frame::before{
+  content:"";
+  position:absolute;inset:.6rem;
+  border:1px dashed var(--rule);
+}
+.frame__no{
+  font-family:var(--display);
+  font-style:italic;
+  font-variation-settings:"opsz" 28;
+  font-size:1.1rem;
+  color:rgba(9,24,48,.45);
+}
+.frame--tall{aspect-ratio:3/4}
+.frame--wide{grid-column:span 2;aspect-ratio:2/1}
+
+/* ——— Footer ——— */
+.foot{
+  background:var(--navy-ink);
+  color:rgba(245,245,245,.78);
+  padding:3.2rem 0 2.2rem;
+  font-size:.88rem;
+}
+.foot__grid{
+  display:grid;grid-template-columns:1fr;gap:2rem;
+  padding-bottom:2rem;border-bottom:1px solid var(--rule-chalk);
+}
+@media(min-width:760px){
+  .foot__grid{grid-template-columns:2fr 1fr 1fr;gap:2.6rem}
+}
+.foot__brand{
+  font-family:var(--display);
+  font-weight:600;font-variation-settings:"opsz" 60;
+  font-size:1.8rem;color:var(--chalk);
+  margin:0 0 .6rem;letter-spacing:-.01em;
+}
+.foot__brand em{font-style:italic;font-weight:400;color:#E0A28A}
+.foot h5{
+  font-family:var(--body);
+  font-weight:600;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
+  color:#E0A28A;margin:0 0 .8rem;
+}
+.foot a:hover{color:var(--chalk)}
+.foot__legal{
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  margin-top:1.6rem;font-size:.78rem;color:rgba(245,245,245,.55);
+}
+
+/* ——— skip / print niceties ——— */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+@media print{
+  .masthead,.nav,.divider,.map,.foot{display:none}
+  body{background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a href="#top" class="brandmark" aria-label="Seabank Fish &amp; Chips home">
+      Seabank<em>Fish &amp; Chips</em>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+      <a href="#gallery">Gallery</a>
+      <a href="tel:+441553772812" class="nav__cta">01553 772812</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ——— HERO / editorial masthead ——— -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero__top">
+        <div class="hero__date">West Lynn · By the river bank, near The Wash</div>
+        <div class="hero__cat">Fried to order · Mon — Sat</div>
+      </div>
+
+      <h1 id="hero-title" class="hero__title">
+        Seabank <em>Fish</em> <span class="amp">&amp;</span> Chips.
+      </h1>
+
+      <p class="hero__lede">
+        A West Lynn chippy on St Edmundsbury Road — frying haddock,
+        cod and chips the way the road has known for as long as
+        anyone here can remember.
+      </p>
+
+      <div class="hero__grid">
+        <div class="hero__col">
+          <h3>Call to collect</h3>
+          <a href="tel:+441553772812" class="hero__phone">01553&nbsp;772812</a>
+          <p class="muted">Ring ahead so it&rsquo;s fried, wrapped and waiting.</p>
+        </div>
+        <div class="hero__col">
+          <h3>Find us</h3>
+          <p>95 St Edmundsbury Road</p>
+          <p>West Lynn · King&rsquo;s Lynn</p>
+          <p>Norfolk · PE30 2NG</p>
+        </div>
+        <div class="hero__col">
+          <h3>This week</h3>
+          <p>Mon — Thu &middot; 11:30 — 14:00, 15:30 — 20:00</p>
+          <p>Fri &amp; Sat &middot; 11:30 — 20:30</p>
+          <p>Sunday &middot; closed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— DIVIDER ——— -->
+  <div class="divider" role="presentation">
+    <div class="wrap divider__inner">
+      <span>Cod</span><span>Haddock</span><span>Chips</span><span>Mushy Peas</span><span>Curry Sauce</span><span>PE30 2NG</span>
+    </div>
+  </div>
+
+  <!-- ——— ABOUT ——— -->
+  <section id="about" class="sec about" aria-labelledby="about-title">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <div class="sec__num">№ 01</div>
+          <h2 id="about-title" class="sec__title">An honest <em>chippy</em>, on St Edmundsbury Road.</h2>
+        </div>
+        <div class="eyebrow">About the shop</div>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__body">
+          <p class="about__lede">
+            West Lynn isn&rsquo;t King&rsquo;s Lynn proper. It&rsquo;s the
+            quieter side — across the Great Ouse, on the way out to
+            the salt marshes and The Wash. Seabank has been frying
+            on St Edmundsbury Road long enough that a fair few of
+            the regulars knew the shop before they knew their way
+            home from it.
+          </p>
+          <p>
+            The recipe is the one a good chip shop always uses: a
+            clean batter that crisps, not flakes; chips cut and
+            cooked twice; fish that&rsquo;s in the fryer the
+            moment it&rsquo;s ordered, not the moment it&rsquo;s
+            convenient. Nothing fancy. Nothing left under the lamp
+            longer than it should be.
+          </p>
+          <p>
+            Walk in, ring ahead, or pop in on the way back from
+            the post office next door. Open six days, closed on
+            Sundays, and rated 5/5 by the Food Standards Agency
+            for what that&rsquo;s worth — which is, around here,
+            quite a lot.
+          </p>
+        </div>
+
+        <aside class="about__aside" aria-label="Shop facts">
+          <h4>The Particulars</h4>
+          <ul class="facts">
+            <li><span>Trade</span><span>Fish &amp; Chips</span></li>
+            <li><span>Where</span><span>West Lynn</span></li>
+            <li><span>FSA rating</span><span>5 / 5</span></li>
+            <li><span>Closed</span><span>Sundays</span></li>
+            <li><span>Phone</span><span>01553 772812</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— MENU / SERVICES ——— -->
+  <section id="menu" class="sec" aria-labelledby="menu-title">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <div class="sec__num">№ 02</div>
+          <h2 id="menu-title" class="sec__title">From the <em>fryer</em>.</h2>
+        </div>
+        <div class="eyebrow">What we cook</div>
+      </div>
+
+      <div class="menu__cols">
+
+        <div class="menu-block">
+          <h3>Fish <em>&amp;</em> Chips</h3>
+          <ul class="menu-list">
+            <li>
+              <span class="item">Cod &amp; Chips
+                <em>The classic. Fried fresh to order.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Haddock &amp; Chips
+                <em>Sweeter, flakier — ask for it crispy.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Large Cod
+                <em>For a proper hunger.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Children&rsquo;s portion
+                <em>Smaller fish, smaller chips.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-block">
+          <h3>From the <em>counter</em></h3>
+          <ul class="menu-list">
+            <li>
+              <span class="item">Sausage &amp; Chips
+                <em>Plain or battered.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Pie &amp; Chips
+                <em>Steak, chicken &amp; mushroom, mince.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Chip butty
+                <em>White or brown, butter as standard.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Chips on their own
+                <em>Salt &amp; vinegar — please ask.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-block">
+          <h3>Sides <em>&amp;</em> sauces</h3>
+          <ul class="menu-list">
+            <li>
+              <span class="item">Mushy peas
+                <em>Soft, salted, traditional.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Curry sauce
+                <em>Mild, on the side or over chips.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Gravy
+                <em>Onion gravy by the pot.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Pickled egg / onion
+                <em>From the jar, by the till.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-block">
+          <h3>To <em>drink</em></h3>
+          <ul class="menu-list">
+            <li>
+              <span class="item">Soft drinks
+                <em>Cans, chilled, by the door.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Bottled water
+                <em>Still &amp; sparkling.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+            <li>
+              <span class="item">Tea
+                <em>Builder&rsquo;s strength, takeaway cup.</em>
+              </span>
+              <span class="dotline" aria-hidden="true"></span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p class="menu__note">
+        Prices are the ones written on the wall above the counter —
+        we keep them honest, and they shift now and again. Call
+        ahead on <a href="tel:+441553772812"><strong>01553 772812</strong></a> to check today&rsquo;s board or to put
+        your order in for collection.
+      </p>
+    </div>
+  </section>
+
+  <!-- ——— CONTACT ——— -->
+  <section id="contact" class="sec contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <div class="sec__num">№ 03</div>
+          <h2 id="contact-title" class="sec__title">Find the <em>shop</em>.</h2>
+        </div>
+        <div class="eyebrow eyebrow--chalk">Visit · Call · Collect</div>
+      </div>
+
+      <div class="contact__grid">
+        <div class="contact__col">
+          <div class="contact__block">
+            <h4>Call to collect</h4>
+            <a href="tel:+441553772812" class="contact__phone">01553&nbsp;772812</a>
+            <p>Ring ahead, especially Fri &amp; Sat — saves you the queue.</p>
+          </div>
+
+          <div class="contact__block">
+            <h4>Address</h4>
+            <p>95 St Edmundsbury Road</p>
+            <p>West Lynn, King&rsquo;s Lynn</p>
+            <p>Norfolk &middot; PE30 2NG</p>
+          </div>
+
+          <div class="contact__block">
+            <h4>Opening hours</h4>
+            <ul class="hours">
+              <li><span>Mon</span><span>11:30 — 14:00 &middot; 15:30 — 20:00</span></li>
+              <li><span>Tue</span><span>11:30 — 14:00 &middot; 15:30 — 20:00</span></li>
+              <li><span>Wed</span><span>11:30 — 14:00 &middot; 15:30 — 20:00</span></li>
+              <li><span>Thu</span><span>11:30 — 14:00 &middot; 15:30 — 20:00</span></li>
+              <li><span>Fri</span><span>11:30 — 20:30</span></li>
+              <li><span>Sat</span><span>11:30 — 20:30</span></li>
+              <li class="closed"><span>Sun</span><span>Closed</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact__col">
+          <iframe
+            class="map"
+            title="Map showing 95 St Edmundsbury Road, West Lynn, King's Lynn PE30 2NG"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=95%20St%20Edmundsbury%20Road%2C%20King%27s%20Lynn%20PE30%202NG&amp;output=embed">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ——— GALLERY (placeholder) ——— -->
+  <section id="gallery" class="sec" aria-labelledby="gallery-title">
+    <div class="wrap">
+      <div class="sec__head">
+        <div>
+          <div class="sec__num">№ 04</div>
+          <h2 id="gallery-title" class="sec__title">The <em>gallery</em>.</h2>
+        </div>
+        <div class="eyebrow">Photographs · coming soon</div>
+      </div>
+
+      <p class="gallery__intro">
+        We&rsquo;re putting together a proper set of photographs of the
+        shop, the fryer, the boards and the queue. Until then,
+        <em>here&rsquo;s the space</em> — drop in and we&rsquo;ll show
+        you the real thing.
+      </p>
+
+      <div class="gallery__grid" aria-hidden="true">
+        <div class="frame"><span class="frame__no">№ 01</span></div>
+        <div class="frame frame--tall"><span class="frame__no">№ 02</span></div>
+        <div class="frame"><span class="frame__no">№ 03</span></div>
+        <div class="frame"><span class="frame__no">№ 04</span></div>
+        <div class="frame frame--wide"><span class="frame__no">№ 05</span></div>
+        <div class="frame"><span class="frame__no">№ 06</span></div>
+        <div class="frame"><span class="frame__no">№ 07</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <p class="foot__brand">Seabank <em>Fish &amp; Chips</em></p>
+        <p>
+          A West Lynn chippy on St Edmundsbury Road. Fried to order,
+          six days a week. Closed Sundays.
+        </p>
+      </div>
+
+      <div>
+        <h5>Where</h5>
+        <p>95 St Edmundsbury Road</p>
+        <p>West Lynn &middot; PE30 2NG</p>
+      </div>
+
+      <div>
+        <h5>Call</h5>
+        <p><a href="tel:+441553772812">01553 772812</a></p>
+        <p><a href="#menu">View the menu</a></p>
+        <p><a href="#contact">Hours &amp; map</a></p>
+      </div>
+    </div>
+
+    <div class="foot__legal">
+      <span>&copy; Seabank Fish &amp; Chips · King&rsquo;s Lynn · PE30 2NG</span>
+      <span>Site by Binning.AI</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
